@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell a Property | EstateHub</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <h2 class="logo"><i class="fa-solid fa-house"></i> EstateHub</h2>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="rent.html">Rent</a></li>
+                <li><a href="sell.html" aria-current="page">Sell</a></li>
+                <li><a href="listings.html">My Listings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="add-property-section">
+            <div class="section-heading">
+                <h2>List a Property</h2>
+                <p>Add a property for sale or rent. Listings are saved in this browser.</p>
+            </div>
+
+            <form id="add-property-form">
+                <input type="text" id="new-title" placeholder="Property Name" required>
+                <input type="text" id="new-location" placeholder="Property Location" required>
+                <input type="text" id="new-country" placeholder="Country" required>
+                <input type="number" id="new-price" placeholder="Price (₹)" min="1" step="any" required>
+
+                <select id="new-listing-type" required>
+                    <option value="sale">For Sale</option>
+                    <option value="rent">For Rent</option>
+                </select>
+
+                <select id="new-type" required>
+                    <option value="">Select Property Type</option>
+                    <option value="house">House</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="villa">Villa</option>
+                    <option value="penthouse">Penthouse</option>
+                    <option value="farmhouse">Farmhouse</option>
+                    <option value="cottage">Cottage</option>
+                    <option value="bungalow">Bungalow</option>
+                    <option value="independent-house">Independent House</option>
+                    <option value="plot">Plot</option>
+                    <option value="commercial">Commercial</option>
+                </select>
+
+                <input type="number" id="new-beds" placeholder="Bedrooms" min="0" step="1" required>
+                <input type="number" id="new-baths" placeholder="Bathrooms" min="0" step="1" required>
+                <input type="number" id="new-area" placeholder="Area in Sq.ft" min="1" step="any" required>
+
+                <div class="property-image-upload">
+                    <label for="property-images">Upload Property Images</label>
+                    <input type="file" id="property-images" accept="image/*" multiple required>
+                    <p>Select up to 10 images. Each image must be smaller than 5 MB.</p>
+                </div>
+                <div id="image-preview-container" aria-label="Selected image previews" aria-live="polite"></div>
+
+                <button type="submit">Add Listing</button>
+                <p id="sell-status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+    <script src="browse.js"></script>
+    <script src="sell.js"></script>
+</body>
+</html>

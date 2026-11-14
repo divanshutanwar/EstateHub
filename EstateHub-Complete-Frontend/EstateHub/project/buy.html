@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Properties | EstateHub</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <h2 class="logo">
+            <i class="fa-solid fa-house"></i> EstateHub
+        </h2>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="buy.html" aria-current="page">Buy</a></li>
+                <li><a href="rent.html">Rent</a></li>
+                <li><a href="sell.html">Sell</a></li>
+                <li><a href="listings.html">My Listings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-banner">
+        <h1>Find Your Dream Property</h1>
+        <p>Explore properties available for sale across India.</p>
+    </section>
+
+    <section class="page-search" aria-label="Search properties for sale">
+        <input type="text" id="buy-location" placeholder="Enter city or location"
+            aria-label="City or location">
+
+        <select id="buy-type" aria-label="Property type">
+            <option value="">All Property Types</option>
+            <option value="house">House</option>
+            <option value="villa">Villa</option>
+            <option value="apartment">Apartment</option>
+            <option value="penthouse">Penthouse</option>
+            <option value="farmhouse">Farmhouse</option>
+            <option value="cottage">Cottage</option>
+            <option value="bungalow">Bungalow</option>
+            <option value="independent-house">Independent House</option>
+            <option value="plot">Plot</option>
+            <option value="commercial">Commercial</option>
+        </select>
+
+        <select id="buy-min-price" aria-label="Minimum price">
+            <option value="">No minimum price</option>
+            <option value="1000000">₹10 Lakh</option>
+            <option value="5000000">₹50 Lakh</option>
+            <option value="10000000">₹1 Crore</option>
+            <option value="20000000">₹2 Crore</option>
+            <option value="30000000">₹3 Crore</option>
+            <option value="50000000">₹5 Crore</option>
+        </select>
+
+        <select id="buy-max-price" aria-label="Maximum price">
+            <option value="">No maximum price</option>
+            <option value="5000000">₹50 Lakh</option>
+            <option value="10000000">₹1 Crore</option>
+            <option value="20000000">₹2 Crore</option>
+            <option value="30000000">₹3 Crore</option>
+            <option value="50000000">₹5 Crore</option>
+        </select>
+
+        <select id="buy-sort" aria-label="Sort properties">
+            <option value="default">Default order</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+        </select>
+
+        <button type="button" id="buy-search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i> Search
+        </button>
+    </section>
+
+    <section class="buy-properties">
+        <h2>Properties for Sale</h2>
+        <div id="buy-property-list" class="property-grid">
+            <p>Properties will appear here.</p>
+        </div>
+    </section>
+
+    <script src="browse.js"></script>
+</body>
+</html>

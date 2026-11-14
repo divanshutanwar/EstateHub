@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Listings | EstateHub</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <h2 class="logo"><i class="fa-solid fa-house"></i> EstateHub</h2>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="rent.html">Rent</a></li>
+                <li><a href="sell.html">Sell</a></li>
+                <li><a href="listings.html" aria-current="page">My Listings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="my-listings-section">
+            <div class="section-heading">
+                <h1>My Listings</h1>
+                <p>Manage properties saved in this browser.</p>
+            </div>
+            <p id="listings-status" role="status" aria-live="polite"></p>
+            <div id="my-properties-container" class="my-properties-list"></div>
+        </section>
+
+        <section class="add-property-section" id="edit-listing-section" hidden>
+            <div class="section-heading">
+                <h2>Edit Listing</h2>
+            </div>
+            <form id="edit-listing-form">
+                <input type="text" id="edit-title" placeholder="Property Name" required>
+                <input type="text" id="edit-location" placeholder="Property Location" required>
+                <input type="text" id="edit-country" placeholder="Country" required>
+                <input type="number" id="edit-price" placeholder="Price (₹)" min="1" step="any" required>
+                <select id="edit-listing-type" required>
+                    <option value="sale">For Sale</option>
+                    <option value="rent">For Rent</option>
+                </select>
+                <select id="edit-type" required>
+                    <option value="house">House</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="villa">Villa</option>
+                    <option value="penthouse">Penthouse</option>
+                    <option value="farmhouse">Farmhouse</option>
+                    <option value="cottage">Cottage</option>
+                    <option value="bungalow">Bungalow</option>
+                    <option value="independent-house">Independent House</option>
+                    <option value="plot">Plot</option>
+                    <option value="commercial">Commercial</option>
+                </select>
+                <input type="number" id="edit-beds" placeholder="Bedrooms" min="0" step="1" required>
+                <input type="number" id="edit-baths" placeholder="Bathrooms" min="0" step="1" required>
+                <input type="number" id="edit-area" placeholder="Area in Sq.ft" min="1" step="any" required>
+                <button type="submit">Save Changes</button>
+                <button type="button" id="cancel-edit-listing">Cancel</button>
+            </form>
+        </section>
+    </main>
+    <script src="browse.js"></script>
+    <script src="listings.js"></script>
+</body>
+</html>
